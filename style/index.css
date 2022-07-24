@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+* {
+  margin: 0rem;
+  padding: 0rem;
+  line-height: 1.5rem;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: hsl(218deg, 23%, 16%);
+}
+
+.advice__card {
+  position: relative;
+  border-radius: 0.625rem;
+  background-color: hsl(217deg, 19%, 24%);
+  padding: 2.5rem 0.3125rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 31.25rem;
+}
+.advice__title {
+  font-size: 0.875rem;
+  color: hsl(150deg, 100%, 66%);
+  text-transform: uppercase;
+  margin-bottom: 1.875rem;
+}
+.advice__text {
+  font-size: 1.75rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 1.875rem;
+  max-width: 90vw;
+  line-height: 1.875rem;
+}
+.advice__divider--desktop {
+  display: none;
+}
+.advice__divider--mobile {
+  margin-bottom: 1.875rem;
+}
+.advice__button {
+  cursor: pointer;
+  position: absolute;
+  top: 88%;
+  padding: 2.1875rem;
+  border-radius: 50%;
+  border: none;
+  background: url("../images/icon-dice.svg") no-repeat center hsl(150deg, 100%, 66%);
+}
+
+@media screen and (min-width: 32.5rem) {
+  .advice__card {
+    padding: 2.5rem 1.25rem;
+  }
+  .advice__divider--desktop {
+    display: block;
+    margin-bottom: 1.875rem;
+  }
+  .advice__divider--mobile {
+    display: none;
+  }
+}/*# sourceMappingURL=index.css.map */

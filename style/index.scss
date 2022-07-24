@@ -1,0 +1,136 @@
+// ===========================================================================================
+//                               VARIABLES
+// // ========================================================================================
+
+
+// COLOURS
+// // ========================================================================================
+
+$lightCyan: hsl(193, 38%, 86%);
+$titleGreen: hsl(150, 100%, 66%);
+$grayishBlue: hsl(217, 19%, 38%);
+$adviceCard: hsl(217, 19%, 24%);
+$backgroundColour: hsl(218, 23%, 16%);
+
+
+
+// FONT
+// // ========================================================================================
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+$fontWeight: 800;
+$font: 'Manrope', sans-serif;
+$quoteFontSize: 28;
+
+
+
+
+// FUNCTIONS
+// // ======================================================================================== 
+// px ---> rem
+@function rem($value){
+    $remValue: calc($value / 16) + rem;
+    @return $remValue;
+}
+
+
+
+
+// SPACING
+// // ======================================================================================== 
+$betweenElements:30;
+
+
+
+// ===========================================================================================
+//                               STYLING
+// ========================================================================================
+* {
+    margin: rem(0);
+    padding: rem(0);
+    line-height: rem(24);
+    box-sizing:border-box;
+}
+
+body{
+    font-family: $font;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: $backgroundColour;
+}
+
+.advice{
+
+    &__card{
+        position: relative;
+        border-radius: rem(10);
+        background-color: $adviceCard;
+        padding: rem(40) rem(5);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: rem(500);
+    }
+
+    &__title{
+        font-size: rem(14);
+        color: $titleGreen;
+        text-transform: uppercase;
+        margin-bottom: rem($betweenElements);
+    }
+
+    &__text{
+        font-size: rem($quoteFontSize);
+        font-weight: $fontWeight;
+        text-align: center;
+        margin-bottom: rem($betweenElements);
+        max-width: 90vw;
+        line-height: rem($betweenElements);
+    }
+
+    &__divider{
+
+        &--desktop{
+            display: none;
+        }
+
+        &--mobile{
+            margin-bottom: rem($betweenElements);
+        }
+    }
+
+    &__button{
+        cursor: pointer;
+        position: absolute;
+        top: 88%;
+        padding: rem(35);
+        border-radius: 50%;
+        border: none;
+        background: url('../images/icon-dice.svg') no-repeat center $titleGreen;
+        
+    }
+}
+
+@media screen and (min-width: rem(520)){
+    .advice{
+
+        &__card{
+            padding: rem(40) rem(20);
+        }
+
+        &__divider{
+
+            &--desktop{
+                display: block;
+                margin-bottom: rem($betweenElements);
+            }
+
+            &--mobile{
+                display: none;
+            }
+        }
+    }
+}
