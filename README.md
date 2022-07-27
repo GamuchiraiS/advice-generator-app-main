@@ -74,4 +74,4 @@ Users should be able to:
 
 ## Acknowledgments
 
-- [Catherine](https://github.com/catherineisonline)
+- [Catherine](https://github.com/catherineisonline). I was able to properly position the button and apply the hover effect by looking at her solution. Massive thank you!
