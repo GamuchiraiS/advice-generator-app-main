@@ -39,6 +39,7 @@ body {
   margin-bottom: 1.875rem;
   max-width: 90vw;
   line-height: 1.875rem;
+  color: white;
 }
 .advice__divider--desktop {
   display: none;
