@@ -111,6 +111,11 @@ body{
         border-radius: 50%;
         border: none;
         background: url('../images/icon-dice.svg') no-repeat center $titleGreen;
+
+        &:hover{
+            box-shadow: rem(-1) rem(1) rem(88) rem(12) rgba(82, 255, 168, 1);
+            transition: all ease-in-out 0.3s;
+        }
         
     }
 }

@@ -56,6 +56,10 @@ body {
   border: none;
   background: url("../images/icon-dice.svg") no-repeat center hsl(150deg, 100%, 66%);
 }
+.advice__button:hover {
+  box-shadow: -0.0625rem 0.0625rem 5.5rem 0.75rem rgb(82, 255, 168);
+  transition: all ease-in-out 0.3s;
+}
 
 @media screen and (min-width: 32.5rem) {
   .advice__card {
